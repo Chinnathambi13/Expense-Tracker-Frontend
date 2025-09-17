@@ -1,0 +1,86 @@
+/* Global styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Container */
+div {
+  box-sizing: border-box;
+}
+
+/* Expense Tracker wrapper */
+.expense-tracker {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 8px 12px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Expense List */
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.expense-item span {
+  font-size: 16px;
+}
+
+/* Summary */
+.expense-summary {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f0f8ff;
+  border: 1px solid #ddd;
+}
