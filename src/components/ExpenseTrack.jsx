@@ -10,7 +10,7 @@ export default function ExpenseTrack() {
 
   // Fetch expenses
   useEffect(() => {
-    axios.get("http://localhost:3001/api")
+    axios.get("https://expense-tracker-backend-ri41.onrender.com/api")
       .then((res) => setExpenses(res.data))
       .catch((err) => console.error("Fetch error:", err));
   }, []);
@@ -19,7 +19,7 @@ export default function ExpenseTrack() {
   const addExpense = (title, amount, id) => {
     if (id) {
       // Update
-      axios.put(`http://localhost:3001/api/${id}`, { title, amount: Number(amount) })
+      axios.put(`https://expense-tracker-backend-ri41.onrender.com/api/${id}`, { title, amount: Number(amount) })
         .then((res) => {
           const updatedList = expenses.map((exp) =>
             exp._id === id ? res.data : exp
@@ -30,7 +30,7 @@ export default function ExpenseTrack() {
         .catch((err) => console.error("Update error:", err));
     } else {
       // Add
-      axios.post("http://localhost:3001/api/", { title, amount: Number(amount) })
+      axios.post("https://expense-tracker-backend-ri41.onrender.com/api/", { title, amount: Number(amount) })
         .then((res) => setExpenses([...expenses, res.data]))
         .catch((err) => console.error("Add error:", err));
     }
@@ -38,7 +38,7 @@ export default function ExpenseTrack() {
 
   // Delete
   const deleteExpense = (id) => {
-    axios.delete(`http://localhost:3001/api/${id}`)
+    axios.delete(`https://expense-tracker-backend-ri41.onrender.com/api/${id}`)
       .then(() => setExpenses(expenses.filter((exp) => exp._id !== id)))
       .catch((err) => console.error("Delete error:", err));
   };
